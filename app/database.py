@@ -6,6 +6,8 @@ from sqlalchemy.orm import Session, sessionmaker
 from app.config import get_settings
 from app.models.base import Base
 
+
+
 settings = get_settings()
 # Shorter fail than OS default; sslmode for Azure is set on the URL in Settings when applicable.
 _engine_kwargs: dict = {"pool_pre_ping": True, "echo": False}

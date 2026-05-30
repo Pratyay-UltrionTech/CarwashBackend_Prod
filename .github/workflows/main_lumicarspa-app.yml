@@ -2,7 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: Build and deploy Python app to Azure Web App - carwash
+name: Build and deploy Python app to Azure Web App - lumicarspa-app
 
 on:
   push:
@@ -63,14 +63,14 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_4D526970875E4956BCB3EDAC4863F472 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_E78DE31B20174738B4EB2DAB4FE35721 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_7A8CD31885B0477198C6E1C295B4A240 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_DFC1799BDC6B4531AA0022866FCAD3DB }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_045FFA616C9D4D63BEB32754B21188DA }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_FDD8E91F0D394CF192E681A8E09DBFF8 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'carwash'
+          app-name: 'lumicarspa-app'
           slot-name: 'Production'
           
